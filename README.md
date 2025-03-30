@@ -169,61 +169,55 @@ When prompted, enter your research topic:
 
 #### Example Research Output
 
-# Research Results: new nike running shoes
+# Topic Research Tool
 ---
+
+### Search Results for: "best mens nike running shoes"
+- Found: The Best Nike Running Shoes 2025 – The Run Testers
+- Found: Men's Running Shoes. Nike.com
+- Found: The 8 Best Nike Running Shoes for Men
+- Found: Mens Best Sellers Running Shoes. Nike.com
+- Found: 7 Best Nike Running Shoes | RunRepeat
 
 ### 📚 Consolidated Summary
 
-*Model's Thought Process:*
+#### 1. Overview of Best Men's Nike Running Shoes
+Nike offers a diverse range of running shoes tailored to different running needs and preferences. The shoes are categorized into lines such as Pegasus, Vomero, and Structure, each designed for specific purposes like daily training, long runs, and racing. Models like the Pegasus 41, Vaporfly 3, and Alphafly 3 are highlighted for their performance in various running scenarios.
 
-First, I need to read through each source summary carefully to gather all the information. Source 1 is from Nike's official website, which lists various shoe models, their prices, categories like road and trail running, and mentions of best sellers and new arrivals. Source 2 is from Reddit, introducing a community for running shoe enthusiasts discussing Nike's new lineup categorized into Pegasus, Structure, and Vomero. Source 3 is another Nike.com page, detailing men's running shoes with specific models and their features.
+#### 2. Key Features and Technologies
+- **Cushioning and Comfort:** Models feature advanced cushioning technologies such as ReactX foam and ZoomX foam, providing comfort and energy return. The Pegasus series is noted for its high rocker design, while the Invincible 3 offers plush cushioning for comfort.
+- **Weight and Drop:** Shoes vary in weight and heel-to-toe drop, with options like the lightweight Vaporfly 3 for speed and the higher-drop Pegasus Plus for longer runs.
+- **Durability and Breathability:** The InfinityRN 4 is praised for its durability, while the Alphafly 3 is commended for its breathability, though it may wear out faster in the heel for some runners.
 
-I'll start with the Overview. It should give a broad picture of the research, mentioning that the summary combines information from multiple sources, avoids redundancy, and highlights key findings while noting any differing perspectives.
+#### 3. Testers' Opinions and Conclusions
+- **Pros and Cons:** The Pegasus 41 is versatile but not ideal for forefoot strikers. The Vaporfly 3 excels in speed but is on the pricier side. The Alphafly 3 is great for marathons but may not be as durable for all runners.
+- **Recommendations:** Testers recommend considering factors like running style, surface (road or trail), and personal comfort. The guide emphasizes the importance of fit and purpose in choosing the right shoe.
 
-Next, Key Findings. I'll list the main points from all sources. The new lineup is categorized into three cushioning types, specific models like Vomero 18 and Pegasus 41 are highlighted, and the website offers customization options. There's a focus on sustainability and advanced cushioning technologies.
+### Source Summaries
 
-For Different Perspectives, I need to check if there are any conflicting views. The Reddit community seems supportive, but there might be a mention of simplification making the lineup less diverse. I'll note that as a potential differing perspective.
+#### Source 1: The Best Nike Running Shoes 2025 – The Run Testers
+*URL: https://theruntesters.com/the-best-nike-running-shoes/*
 
-Finally, the Conclusions will tie everything together, emphasizing Nike's focus on innovation, customization, and sustainability, catering to a broad audience.
+Nike is organizing their 2025 running shoes into three main lines:
+1. **Pegasus Line:** Daily trainers
+2. **Vomero Line:** Max-cushioned shoes
+3. **Structure Line:** Stability-focused models
 
-*Final Research Summary:*
+Top Models and Features:
+- Pegasus 41: Balance of comfort and versatility
+- Pegasus Plus: Lighter, more responsive
+- Zoom Fly 6: Super-trainer with carbon plate
+- Alphafly 3: Top-tier racing shoe
+- Vomero 18: Maximum cushioning
+- Vaporfly 3: Lightweight racer
+- Pegasus Premium: High-stack, stylish
+- Invincible 3: Soon joining Vomero line
 
-## Comprehensive Summary of Research on New Nike Running Shoes
+[Additional source summaries follow similar format...]
 
-### 1. Overview
-
-This summary combines information from multiple sources to provide a comprehensive overview of Nike's new running shoes. The research covers various aspects, including product features, pricing, availability, and customer perspectives. The goal is to highlight key findings while avoiding redundancy and noting any conflicting information or different perspectives.
-
-### 2. Key Findings
-
-- **New Nike Running Shoes Lineup:** Nike has introduced a new lineup of running shoes, categorized into three main franchises: Pegasus (responsive cushioning), Structure (supportive cushioning), and Vomero (maximum cushioning). These categories are designed to meet the specific needs of runners, offering a clear distinction between cushioning types.
-
-- **Key Models:** The Pegasus 41 and Pegasus Plus are currently available, while the Pegasus Premium will launch in late January 2025. The Vomero 18 will be available starting February 27, 2025, with additional Vomero and Structure models launching later in 2025.
-
-- **Customization and Options:** Nike offers a wide range of options for runners, including road running, trail running, and track & field shoes. Customers can filter by cushioning type, gender, age, price, color, and width, making it easier to find the right shoe for their needs.
-
-- **Promotions and Discounts:** Nike provides promotions and discounts for specific groups, such as students and military personnel, offering savings on select models.
-
-- **Sustainability and Technology:** The new lineup incorporates advanced cushioning technologies and sustainable materials, reflecting Nike's commitment to innovation and environmental responsibility.
-
-### 3. Different Perspectives
-
-- **Community Feedback:** The running shoe community, as seen on platforms like Reddit, has expressed enthusiasm for the new lineup. However, some users have noted that the streamlined product line may limit options for runners who prefer more niche or specialized shoes.
-
-- **Price Points:** While some models are competitively priced (e.g., the Pegasus 41 at $140), others, such as the Vaporfly 4 at $260, are on the higher end of the spectrum. This pricing strategy may appeal to serious athletes but could be a barrier for casual runners.
-
-### 4. Conclusions
-
-Nike's new running shoes lineup demonstrates the brand's focus on innovation, customization, and sustainability. By categorizing its products into three distinct cushioning types—Pegasus, Structure, and Vomero—Nike aims to simplify the shopping experience for runners. The inclusion of advanced technologies and eco-friendly materials underscores Nike's commitment to meeting the evolving needs of athletes and environmentally conscious consumers. However, the streamlined product line and higher price points for certain models may not appeal to all runners, particularly those seeking more affordable or specialized options.
-
----
-
-This example shows how the Topic Researcher:
-- Processes multiple sources
-- Structures information clearly
-- Provides comprehensive analysis
-- Includes different perspectives
-- Draws meaningful conclusions
+### Research Statistics
+- **Processing Time:** 118.77 seconds
+- **Sources Processed:** 5/5
 
 ## Error Handling
 
