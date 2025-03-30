@@ -8,15 +8,13 @@ A playground project for experimenting with the Groq API, demonstrating web cont
 - [Modules](#modules)
   - [Web Page Summarizer](#web-page-summarizer)
     - [Basic Usage](#webpage-summarizer-basic-usage)
-    - [Command Line Options](#webpage-summarizer-options)
-    - [Example Output](#webpage-summarizer-output)
+    - [Command Line Options](#webpage-summarizer-command-line-options)
+    - [Example Output](#webpage-summarizer-example-output)
   - [Topic Researcher](#topic-researcher)
     - [Setup](#topic-researcher-setup)
     - [Basic Usage](#topic-researcher-basic-usage)
-    - [Example Output](#topic-researcher-output)
+    - [Example Output](#topic-researcher-example-output)
 - [Error Handling](#error-handling)
-- [Contributing](#contributing)
-- [License](#license)
 - [Support](#support)
 
 ## Overview
@@ -56,7 +54,7 @@ GOOGLE_SEARCH_ENGINE_ID=your-search-engine-id-here
 
 The webpage summarizer module (`webpage_summarizer.py`) provides functionality to summarize content from any web page using Groq's AI models.
 
-#### Basic Usage
+#### Webpage Summarizer Basic Usage
 
 1. **As a Python Module**:
 ```python
@@ -84,7 +82,7 @@ python webpage_summarizer.py --url https://groq.com
 python webpage_summarizer.py
 ```
 
-#### Command Line Options
+#### Webpage Summarizer Command Line Options
 
 ```bash
 python webpage_summarizer.py [options]
@@ -96,7 +94,7 @@ Options:
   --model MODEL         Groq model to use (default: deepseek-r1-distill-llama-70b)
 ```
 
-#### Example Output
+#### Webpage Summarizer Example Output
 
 Here's an example of summarizing Groq's website:
 
@@ -142,7 +140,7 @@ I need to ensure the summary is clear and each point is distinct. Also, the user
 
 The Topic Researcher module uses Google Custom Search to find relevant sources about a topic and generates comprehensive summaries using the Groq API.
 
-#### Setup
+#### Topic Researcher Setup
 
 1. Get a Google Custom Search API key:
    - Visit [Google Cloud Console](https://console.cloud.google.com)
@@ -158,7 +156,7 @@ The Topic Researcher module uses Google Custom Search to find relevant sources a
 
 3. Configure environment variables as shown in the Installation section
 
-#### Basic Usage
+#### Topic Researcher Basic Usage
 
 Run the topic researcher:
 ```bash
@@ -167,7 +165,7 @@ python topic_researcher.py
 
 When prompted, enter your research topic:
 
-#### Example Research Output
+#### Topic Researcher Example Output
 
 # Topic Research Tool
 ---
