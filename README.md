@@ -159,22 +159,17 @@ Available arguments:
 
 ### Example Output
 
-Here's an example of summarizing a sports article:
+Here's an example of summarizing Groq's website:
 
 # Groq Web Content Summarizer
 ---
-
-### Input
-```bash
-Enter the URL to summarize: https://www.espn.com/mens-college-basketball/story/_/id/44463330/maryland-kevin-willard-villanova-head-coach
-```
 
 ### Configuration
 - **Model:** deepseek-r1-distill-llama-70b
 - **Max Length:** 1000
 - **Temperature:** 0.7
 
-> 🌐 *Fetching content from espn.com...*  
+> 🌐 *Fetching content from https://groq.com...*  
 > 🤖 *Generating summary...*
 
 ### Summary Results
@@ -184,24 +179,22 @@ Enter the URL to summarize: https://www.espn.com/mens-college-basketball/story/_
 
 *Model's Thought Process:*
 
-The main topic is about Kevin Willard being hired as the new head coach at Villanova. He was previously at Maryland. I should note that.
+First, I'll scan through the text. I see mentions of GroqCloud™, a self-serve developer tier, which suggests they're expanding access to their platform. There are also specific models like PlayAI Dialog and Mistral Saba 24B, which are probably new releases. Then, there's information about funding rounds and valuations, indicating financial growth.
 
-Maryland had a successful season under Willard, making the Sweet 16. That's a key achievement. Also, Willard's comments about needing changes, especially regarding NIL, are important. He mentioned Maryland's struggles with NIL funding and some budget constraints, which probably influenced his decision to leave.
+I should make sure each main point captures these elements. The first point could be about the launch of new models and services. The second point should cover their cloud platform's accessibility and compatibility. The third point would highlight their financial achievements and industry recognition.
 
-At Villanova, he's replacing Kyle Neptune, who didn't do well in his tenure. Also, Willard has a good coaching background, especially in the Big East from his time at Seton Hall. That experience is a plus for Villanova.
-
-I should structure these points clearly, making sure each is concise and covers the main aspects: the hiring, Maryland's success and issues, and Willard's fit at Villanova.
+I need to ensure the summary is clear and each point is distinct. Also, the user emphasized conciseness, so I'll keep each point brief without losing important details.
 
 *Final Summary:*
 
-1. **Kevin Willard Hired at Villanova:** Maryland's Kevin Willard has been hired as the new head coach at Villanova, replacing Kyle Neptune, who failed to lead the Wildcats to the NCAA tournament in his three seasons.
+1. **Groq Launches New AI Models and Services:** Groq has introduced several new AI models and services, including PlayAI Dialog for more human-like voice AI, Mistral Saba 24B for the Middle East and South Asia, and Qwen QwQ-32B available on GroqCloud™. Additionally, GroqCloud™ now offers a self-serve developer tier.
 
-2. **Success at Maryland:** During Willard's three-season tenure at Maryland, the Terrapins achieved one of their best seasons in 20 years, earning a 4-seed in the NCAA tournament and reaching the Sweet 16. They finished 27-9 overall and 14-6 in the Big Ten.
+2. **GroqCloud™ Platform and Compatibility:** GroqCloud™ provides fast AI inference for popular models like Llama, Mixtral, and Whisper. It offers seamless migration from other providers, such as OpenAI, with minimal code changes, and has been benchmarked for speed and efficiency.
 
-3. **Willard's Vision and Challenges:** Willard emphasized the need for "fundamental changes" at Maryland, particularly regarding NIL (Name, Image, and Likeness) funding and resource allocation. His move to Villanova marks a return to the Big East, where he previously coached Seton Hall for 12 seasons, leading the Pirates to five NCAA tournament appearances.
+3. **Groq's Growth and Recognition:** Groq has raised significant funding, achieving a valuation of $2.8 billion, and is recognized as a major challenger to Nvidia in the AI chip market. Its technology has been praised by industry leaders like Yann LeCun, and the company continues to expand its offerings and user base.
 
 ### Statistics
-- **Processing Time:** 2.14 seconds
-- **Summary Length:** 1,828 characters
+- **Processing Time:** 2.64 seconds
+- **Summary Length:** 2,047 characters
 
 ---
