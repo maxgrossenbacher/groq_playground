@@ -1,6 +1,23 @@
 # Groq Playground
 
-A playground project for experimenting with the Groq API, demonstrating web content summarization capabilities.
+A playground project for experimenting with the Groq API, demonstrating web content summarization and topic research capabilities.
+
+## Table of Contents
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Modules](#modules)
+  - [Web Page Summarizer](#web-page-summarizer)
+    - [Basic Usage](#webpage-summarizer-basic-usage)
+    - [Command Line Options](#webpage-summarizer-options)
+    - [Example Output](#webpage-summarizer-output)
+  - [Topic Researcher](#topic-researcher)
+    - [Setup](#topic-researcher-setup)
+    - [Basic Usage](#topic-researcher-basic-usage)
+    - [Example Output](#topic-researcher-output)
+- [Error Handling](#error-handling)
+- [Contributing](#contributing)
+- [License](#license)
+- [Support](#support)
 
 ## Overview
 
@@ -10,6 +27,7 @@ This project provides tools to interact with Groq's LLM API, specifically focuse
 
 - Python 3.8+
 - Groq API key (Get your free API key from [Groq Developer Console](https://console.groq.com))
+- Google Search API key (For topic researcher)
 - pip (Python package manager)
 
 ## Installation
@@ -25,127 +43,60 @@ cd groq_playground
 pip install -r requirements.txt
 ```
 
-3. Set up your Groq API key:
-```bash
-export GROQ_API_KEY='your-api-key-here'
+3. Set up your environment variables in `.env`:
+```text
+GROQ_API_KEY=your-groq-api-key-here
+GOOGLE_SEARCH_API_KEY=your-google-api-key-here
+GOOGLE_SEARCH_ENGINE_ID=your-search-engine-id-here
 ```
 
-## Usage Example
+## Modules
 
-Here's an example of how to use the module to summarize the Groq website (https://groq.com):
+### Web Page Summarizer
 
+The webpage summarizer module (`webpage_summarizer.py`) provides functionality to summarize content from any web page using Groq's AI models.
+
+#### Basic Usage
+
+1. **As a Python Module**:
 ```python
-from groq_summarizer import webpage_summarizer
+from webpage_summarizer import GroqSummarizer
 
-# Example usage
+# Initialize summarizer
+summarizer = GroqSummarizer(
+    model="deepseek-r1-distill-llama-70b",
+    max_length=500,
+    temperature=0.7
+)
+
+# Summarize a webpage
 url = "https://groq.com"
-summary = webpage_summarizer.GroqSummarizer(url)
+summary = summarizer.summarize_webpage(url)
 print(summary)
 ```
 
-Expected output will include key information about Groq, such as:
-- Their AI inference platform capabilities
-- Available models (Llama, Mixtral, Gemma, Whisper)
-- Recent company valuation ($2.8B)
-- Developer access through GroqCloud™
-
-## Features
-
-- Web content extraction
-- AI-powered summarization using Groq's LLM
-- Support for various webpage formats
-- Configurable summarization parameters
-
-## Configuration
-
-You can customize the summarization behavior by modifying these parameters:
-
-```python
-summarize_webpage(
-    url,
-    max_length=500,  # Maximum summary length
-    temperature=0.7,  # Response creativity (0.0-1.0)
-    model="deepseek-r1-distill-llama-70b"  # Choose your preferred Groq model
-)
-```
-
-## Models Available
-
-Groq supports several open-source models:
-- Llama
-- DeepSeek
-- Gemma
-- Whisper
-- And more...
-
-
-## Troubleshooting
-
-If you encounter any errors:
-
-1. Check your API key is properly set:
+2. **From Command Line**:
 ```bash
-echo $GROQ_API_KEY
-```
+# Basic usage
+python webpage_summarizer.py --url https://groq.com
 
-2. Verify the URL is accessible:
-```bash
-curl -I https://groq.com
-```
-
-3. Ensure you have all required dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-## Support
-
-For questions and support:
-- Check the [Groq Documentation](https://console.groq.com/docs/overview)
-
-## Command Line Usage
-
-### Basic Usage
-
-1. Open your terminal and navigate to the project directory:
-```bash
-cd groq_playground
-```
-
-2. Run the summarizer script:
-```bash
+# Interactive mode
 python webpage_summarizer.py
 ```
 
-3. When prompted, paste your URL:
-```
-Enter the URL to summarize: https://groq.com
-```
+#### Command Line Options
 
-4. The script will then:
-   - Fetch the webpage content
-   - Process it through Groq's API
-   - Display the summary in your terminal
-
-### Command Line Arguments
-
-You can also run the script directly with a URL:
 ```bash
-python webpage_summarizer.py --url https://groq.com
+python webpage_summarizer.py [options]
+
+Options:
+  --url URL             URL to summarize
+  --max-length LENGTH   Maximum length of summary (default: 500)
+  --temperature TEMP    Temperature for text generation (default: 0.7)
+  --model MODEL         Groq model to use (default: deepseek-r1-distill-llama-70b)
 ```
 
-Additional options:
-```bash
-python webpage_summarizer.py --url https://groq.com --max-length 500 --temperature 0.7
-```
-
-Available arguments:
-- `--url`: The webpage URL to summarize
-- `--max-length`: Maximum length of the summary (default: 1000)
-- `--temperature`: Controls creativity of the response (default: 0.7)
-- `--model`: Specify the Groq model to use (default: deepseek-r1-distill-llama-70b)
-
-### Example Output
+#### Example Output
 
 Here's an example of summarizing Groq's website:
 
@@ -186,3 +137,114 @@ I need to ensure the summary is clear and each point is distinct. Also, the user
 - **Summary Length:** 2,047 characters
 
 ---
+
+### Topic Researcher
+
+The Topic Researcher module uses Google Custom Search to find relevant sources about a topic and generates comprehensive summaries using the Groq API.
+
+#### Setup
+
+1. Get a Google Custom Search API key:
+   - Visit [Google Cloud Console](https://console.cloud.google.com)
+   - Create a new project or select existing
+   - Enable Custom Search API
+   - Create credentials (API key)
+
+2. Set up a Custom Search Engine:
+   - Visit [Programmable Search Engine](https://programmablesearchengine.google.com)
+   - Create a new search engine
+   - Get your Search Engine ID
+   - Configure for searching the entire web
+
+3. Configure environment variables as shown in the Installation section
+
+#### Basic Usage
+
+Run the topic researcher:
+```bash
+python topic_researcher.py
+```
+
+When prompted, enter your research topic:
+
+#### Example Research Output
+
+# Research Results: new nike running shoes
+---
+
+### 📚 Consolidated Summary
+
+*Model's Thought Process:*
+
+First, I need to read through each source summary carefully to gather all the information. Source 1 is from Nike's official website, which lists various shoe models, their prices, categories like road and trail running, and mentions of best sellers and new arrivals. Source 2 is from Reddit, introducing a community for running shoe enthusiasts discussing Nike's new lineup categorized into Pegasus, Structure, and Vomero. Source 3 is another Nike.com page, detailing men's running shoes with specific models and their features.
+
+I'll start with the Overview. It should give a broad picture of the research, mentioning that the summary combines information from multiple sources, avoids redundancy, and highlights key findings while noting any differing perspectives.
+
+Next, Key Findings. I'll list the main points from all sources. The new lineup is categorized into three cushioning types, specific models like Vomero 18 and Pegasus 41 are highlighted, and the website offers customization options. There's a focus on sustainability and advanced cushioning technologies.
+
+For Different Perspectives, I need to check if there are any conflicting views. The Reddit community seems supportive, but there might be a mention of simplification making the lineup less diverse. I'll note that as a potential differing perspective.
+
+Finally, the Conclusions will tie everything together, emphasizing Nike's focus on innovation, customization, and sustainability, catering to a broad audience.
+
+*Final Research Summary:*
+
+## Comprehensive Summary of Research on New Nike Running Shoes
+
+### 1. Overview
+
+This summary combines information from multiple sources to provide a comprehensive overview of Nike's new running shoes. The research covers various aspects, including product features, pricing, availability, and customer perspectives. The goal is to highlight key findings while avoiding redundancy and noting any conflicting information or different perspectives.
+
+### 2. Key Findings
+
+- **New Nike Running Shoes Lineup:** Nike has introduced a new lineup of running shoes, categorized into three main franchises: Pegasus (responsive cushioning), Structure (supportive cushioning), and Vomero (maximum cushioning). These categories are designed to meet the specific needs of runners, offering a clear distinction between cushioning types.
+
+- **Key Models:** The Pegasus 41 and Pegasus Plus are currently available, while the Pegasus Premium will launch in late January 2025. The Vomero 18 will be available starting February 27, 2025, with additional Vomero and Structure models launching later in 2025.
+
+- **Customization and Options:** Nike offers a wide range of options for runners, including road running, trail running, and track & field shoes. Customers can filter by cushioning type, gender, age, price, color, and width, making it easier to find the right shoe for their needs.
+
+- **Promotions and Discounts:** Nike provides promotions and discounts for specific groups, such as students and military personnel, offering savings on select models.
+
+- **Sustainability and Technology:** The new lineup incorporates advanced cushioning technologies and sustainable materials, reflecting Nike's commitment to innovation and environmental responsibility.
+
+### 3. Different Perspectives
+
+- **Community Feedback:** The running shoe community, as seen on platforms like Reddit, has expressed enthusiasm for the new lineup. However, some users have noted that the streamlined product line may limit options for runners who prefer more niche or specialized shoes.
+
+- **Price Points:** While some models are competitively priced (e.g., the Pegasus 41 at $140), others, such as the Vaporfly 4 at $260, are on the higher end of the spectrum. This pricing strategy may appeal to serious athletes but could be a barrier for casual runners.
+
+### 4. Conclusions
+
+Nike's new running shoes lineup demonstrates the brand's focus on innovation, customization, and sustainability. By categorizing its products into three distinct cushioning types—Pegasus, Structure, and Vomero—Nike aims to simplify the shopping experience for runners. The inclusion of advanced technologies and eco-friendly materials underscores Nike's commitment to meeting the evolving needs of athletes and environmentally conscious consumers. However, the streamlined product line and higher price points for certain models may not appeal to all runners, particularly those seeking more affordable or specialized options.
+
+---
+
+This example shows how the Topic Researcher:
+- Processes multiple sources
+- Structures information clearly
+- Provides comprehensive analysis
+- Includes different perspectives
+- Draws meaningful conclusions
+
+## Error Handling
+
+If you encounter any errors:
+
+1. Check your API key is properly set:
+```bash
+echo $GROQ_API_KEY
+```
+
+2. Verify the URL is accessible:
+```bash
+curl -I https://groq.com
+```
+
+3. Ensure you have all required dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+## Support
+
+For questions and support:
+- Check the [Groq Documentation](https://console.groq.com/docs/overview)
