@@ -79,11 +79,18 @@ def main():
     
     summarizer = GroqURLSummarizer(api_key)
     
-    # Example URL to summarize
-    url = "https://groq.com/"
+    # Get URL from user input with default value
+    default_url = "https://groq.com/"
+    url = input(f"Enter the URL you want to summarize (press Enter for {default_url}): ").strip()
+    
+    # Use default URL if no input provided
+    if not url:
+        url = default_url
+    
     try:
+        print(f"\nGenerating summary for: {url}")
         summary = summarizer.summarize_url(url)
-        print("Summary of main points:")
+        print("\nSummary of main points:")
         print(summary)
     except Exception as e:
         print(f"Error: {str(e)}")
