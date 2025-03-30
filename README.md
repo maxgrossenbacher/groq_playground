@@ -35,11 +35,11 @@ export GROQ_API_KEY='your-api-key-here'
 Here's an example of how to use the module to summarize the Groq website (https://groq.com):
 
 ```python
-from groq_summarizer import summarize_webpage
+from groq_summarizer import webpage_summarizer
 
 # Example usage
 url = "https://groq.com"
-summary = summarize_webpage(url)
+summary = webpage_summarizer.GroqSummarizer(url)
 print(summary)
 ```
 
@@ -121,12 +121,12 @@ For questions and support:
 
 1. Open your terminal and navigate to the project directory:
 ```bash
-cd groq_playground/website_summarizer
+cd groq_playground
 ```
 
 2. Run the summarizer script:
 ```bash
-python groq_summarizer.py
+python webpage_summarizer.py
 ```
 
 3. When prompted, paste your URL:
@@ -143,12 +143,12 @@ Enter the URL to summarize: https://groq.com
 
 You can also run the script directly with a URL:
 ```bash
-python groq_summarizer.py --url https://groq.com
+python webpage_summarizer.py --url https://groq.com
 ```
 
 Additional options:
 ```bash
-python groq_summarizer.py --url https://groq.com --max-length 500 --temperature 0.7
+python webpage_summarizer.py --url https://groq.com --max-length 500 --temperature 0.7
 ```
 
 Available arguments:
