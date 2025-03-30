@@ -122,12 +122,12 @@ For questions and support:
 
 1. Open your terminal and navigate to the project directory:
 ```bash
-cd groq_playground
+cd groq_playground/website_summarizer
 ```
 
 2. Run the summarizer script:
 ```bash
-python summarize.py
+python groq_summarizer.py
 ```
 
 3. When prompted, paste your URL:
@@ -144,12 +144,12 @@ Enter the URL to summarize: https://groq.com
 
 You can also run the script directly with a URL:
 ```bash
-python summarize.py --url https://groq.com
+python groq_summarizer.py --url https://groq.com
 ```
 
 Additional options:
 ```bash
-python summarize.py --url https://groq.com --max-length 500 --temperature 0.7
+python groq_summarizer.py --url https://groq.com --max-length 500 --temperature 0.7
 ```
 
 Available arguments:
