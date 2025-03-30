@@ -78,13 +78,6 @@ Groq supports several open-source models:
 - Whisper
 - And more...
 
-## Error Handling
-
-The module includes error handling for common issues:
-- Invalid URLs
-- API authentication errors
-- Rate limiting
-- Network connectivity issues
 
 ## Troubleshooting
 
@@ -104,11 +97,6 @@ curl -I https://groq.com
 ```bash
 pip install -r requirements.txt
 ```
-
-## Acknowledgments
-
-- Groq for providing the high-performance inference API
-- The open-source community for model availability
 
 ## Support
 
