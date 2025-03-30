@@ -5,8 +5,8 @@ import requests
 load_dotenv()
 
 def test_search():
-    api_key = os.getenv("GOOGLE_SEARCH_API_KEY")
-    search_engine_id = os.getenv("GOOGLE_SEARCH_ENGINE_ID")
+    api_key = os.getenv("GROQ_GOOGLE_SEARCH_API_KEY")
+    search_engine_id = os.getenv("GROQ_GOOGLE_SEARCH_ENGINE_ID")
 
     print(f"\nTesting with:")
     print(f"Search Engine ID: {search_engine_id}")
