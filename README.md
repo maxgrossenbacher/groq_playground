@@ -153,9 +153,9 @@ python groq_summarizer.py --url https://groq.com --max-length 500 --temperature 
 
 Available arguments:
 - `--url`: The webpage URL to summarize
-- `--max-length`: Maximum length of the summary (default: 500)
+- `--max-length`: Maximum length of the summary (default: 1000)
 - `--temperature`: Controls creativity of the response (default: 0.7)
-- `--model`: Specify the Groq model to use (default: mixtral-8x7b-32768)
+- `--model`: Specify the Groq model to use (default: deepseek-r1-distill-llama-70b)
 
 ### Example Output
 
