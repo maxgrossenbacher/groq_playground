@@ -3,6 +3,7 @@ from groq import Groq
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
+import textwrap
 
 class GroqURLSummarizer:
     def __init__(self, api_key):
@@ -70,7 +71,30 @@ class GroqURLSummarizer:
         except Exception as e:
             raise Exception(f"Error generating summary: {str(e)}")
 
-# Example usage
+def pretty_print_summary(url, summary):
+    width = 80
+    border = "=" * width
+    
+    print(f"\n{border}")
+    print(f"URL: {url}".center(width))
+    print(f"{border}\n")
+    print("SUMMARY:")
+    print("-" * width)
+    
+    # Format the summary with proper line breaks and indentation
+    # Split into paragraphs and wrap text
+    paragraphs = summary.split('\n')
+    for paragraph in paragraphs:
+        # Add indentation and wrap long lines
+        wrapped_text = '\n'.join(
+            textwrap.fill(line.strip(), width=width-4, initial_indent='  ', subsequent_indent='  ')
+            for line in paragraph.split('\n') if line.strip()
+        )
+        print(wrapped_text)
+        print()  # Add space between paragraphs
+    
+    print(f"{border}\n")
+
 def main():
     # Initialize with your Groq API key
     api_key = os.getenv("GROQ_API_KEY")
@@ -88,10 +112,9 @@ def main():
         url = default_url
     
     try:
-        print(f"\nGenerating summary for: {url}")
+        print(f"\nGenerating summary...")
         summary = summarizer.summarize_url(url)
-        print("\nSummary of main points:")
-        print(summary)
+        pretty_print_summary(url, summary)
     except Exception as e:
         print(f"Error: {str(e)}")
 
