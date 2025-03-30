@@ -163,7 +163,11 @@ Run the topic researcher:
 python topic_researcher.py
 ```
 
-When prompted, enter your research topic:
+When prompted, enter your research topic or pass the research topic in the command line:
+
+```bash
+python topic_researcher.py --topic "best mens nike running shoes"
+```
 
 #### Topic Researcher Example Output
 
