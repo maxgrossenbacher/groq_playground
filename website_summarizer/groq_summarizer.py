@@ -53,7 +53,7 @@ class GroqSummarizer:
     Args:
         api_key (Optional[str]): Groq API key. If not provided, will look for GROQ_API_KEY in environment
         model (str): Name of the Groq model to use (default: "deepseek-r1-distill-llama-70b")
-        max_length (int): Maximum length of generated summary (default: 500)
+        max_length (int): Maximum length of generated summary (default: 1000)
         temperature (float): Temperature setting for text generation (default: 0.7)
 
     Raises:
@@ -64,7 +64,7 @@ class GroqSummarizer:
         self,
         api_key: Optional[str] = None,
         model: str = "deepseek-r1-distill-llama-70b",
-        max_length: int = 500,
+        max_length: int = 1000,
         temperature: float = 0.7
     ):
         self.api_key = api_key or os.getenv("GROQ_API_KEY")
@@ -124,15 +124,15 @@ class GroqSummarizer:
         Raises:
             Exception: If there's an error generating the summary
         """
-        prompt = f"""Please summarize the following text concisely:
+        prompt = f"""Please summarize the following text concisely into 3 main points:
 
-{text[:10000]}  # Limit input text to prevent token overflow
+        {text[:10000]}  # Limit input text to prevent token overflow
 
-Key points to include:
-- Main topics and themes
-- Important facts and figures
-- Key announcements or updates
-"""
+        Key points to include:
+        - Main topics and themes
+        - Important facts and figures
+        - Key announcements or updates
+        """
 
         try:
             completion = self.client.chat.completions.create(
@@ -193,7 +193,7 @@ def main():
     """
     parser = argparse.ArgumentParser(description="Summarize web content using Groq API")
     parser.add_argument("--url", type=str, help="URL to summarize")
-    parser.add_argument("--max-length", type=int, default=500, help="Maximum length of summary")
+    parser.add_argument("--max-length", type=int, default=1000, help="Maximum length of summary")
     parser.add_argument("--temperature", type=float, default=0.7, help="Temperature for text generation")
     parser.add_argument("--model", type=str, default="deepseek-r1-distill-llama-70b", help="Groq model to use")
     

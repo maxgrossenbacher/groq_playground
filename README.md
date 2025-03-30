@@ -159,17 +159,22 @@ Available arguments:
 
 ### Example Output
 
-When you run the summarizer, you'll see the following output:
+Here's an example of summarizing a sports article:
 
 # Groq Web Content Summarizer
 ---
 
+### Input
+```bash
+Enter the URL to summarize: https://www.espn.com/mens-college-basketball/story/_/id/44463330/maryland-kevin-willard-villanova-head-coach
+```
+
 ### Configuration
 - **Model:** deepseek-r1-distill-llama-70b
-- **Max Length:** 600
-- **Temperature:** 0.8
+- **Max Length:** 1000
+- **Temperature:** 0.7
 
-> 🌐 *Fetching content from https://groq.com...*  
+> 🌐 *Fetching content from espn.com...*  
 > 🤖 *Generating summary...*
 
 ### Summary Results
@@ -179,28 +184,24 @@ When you run the summarizer, you'll see the following output:
 
 *Model's Thought Process:*
 
-First, I need to read through the text carefully. It looks like the text is from a website or a promotional material for Groq, highlighting their products, services, and recent news. The user wants the main points extracted without the fluff.
+The main topic is about Kevin Willard being hired as the new head coach at Villanova. He was previously at Maryland. I should note that.
 
-I notice that Groq is focused on AI inference, specifically with their GroqCloud platform. They have a self-serve developer tier available now, which is a key point. There's mention of a new TTS model called PlayAI Dialog, which makes voice AI sound more human. That seems important.
+Maryland had a successful season under Willard, making the Sweet 16. That's a key achievement. Also, Willard's comments about needing changes, especially regarding NIL, are important. He mentioned Maryland's struggles with NIL funding and some budget constraints, which probably influenced his decision to leave.
 
-Looking further, there are specific models like Mistral Saba 24B for the Middle East and South Asia, and Qwen QwQ-32B running on their cloud. These are specialized models, so they should be included.
+At Villanova, he's replacing Kyle Neptune, who didn't do well in his tenure. Also, Willard has a good coaching background, especially in the Big East from his time at Seton Hall. That experience is a plus for Villanova.
 
-The text also talks about how easy it is to switch from OpenAI by changing just three lines of code. That's a big selling point for developers, so that's definitely worth noting.
-
-Financial aspects are mentioned too, with Groq raising $640 million and being valued at $2.8 billion. This indicates their growth and position in the market, competing with major players like Nvidia.
-
-There are endorsements from Yann LeCun, which adds credibility. Also, the availability of benchmarks and the emphasis on speed from independent analyses should be highlighted.
-
-I should structure the summary to include all these points in a logical flow: start with what Groq is known for, their new products and services, ease of integration, financial status, endorsements, and performance benchmarks.
-
-I need to make sure the summary is concise, so I'll avoid redundant information and focus on the most impactful details. The user probably needs this for a quick overview or to share key updates, so clarity is essential.
+I should structure these points clearly, making sure each is concise and covers the main aspects: the hiring, Maryland's success and issues, and Willard's fit at Villanova.
 
 *Final Summary:*
 
-Groq specializes in fast AI inference, offering solutions like GroqCloud™, a platform for running openly available models such as Llama, Whisper, and Qwen. The company recently launched PlayAI Dialog, a text-to-speech (TTS) model designed to produce more human-like voice AI. GroqCloud™ now has a self-serve developer tier, making it easier for developers to access and integrate AI models. The platform is compatible with OpenAI, requiring only minimal code changes to migrate. Groq has raised significant funding, with a valuation of $2.8 billion, and is recognized for its high-speed inference capabilities, as validated by independent benchmarks. The company also offers specialized models like Mistral Saba 24B for the Middle East and South Asia. Groq is endorsed by AI leaders like Yann LeCun and is positioned as a key challenger to Nvidia in the AI chip market.
+1. **Kevin Willard Hired at Villanova:** Maryland's Kevin Willard has been hired as the new head coach at Villanova, replacing Kyle Neptune, who failed to lead the Wildcats to the NCAA tournament in his three seasons.
+
+2. **Success at Maryland:** During Willard's three-season tenure at Maryland, the Terrapins achieved one of their best seasons in 20 years, earning a 4-seed in the NCAA tournament and reaching the Sweet 16. They finished 27-9 overall and 14-6 in the Big Ten.
+
+3. **Willard's Vision and Challenges:** Willard emphasized the need for "fundamental changes" at Maryland, particularly regarding NIL (Name, Image, and Likeness) funding and resource allocation. His move to Villanova marks a return to the Big East, where he previously coached Seton Hall for 12 seasons, leading the Pirates to five NCAA tournament appearances.
 
 ### Statistics
-- **Processing Time:** 3.02 seconds
-- **Summary Length:** 2,868 characters
+- **Processing Time:** 2.14 seconds
+- **Summary Length:** 1,828 characters
 
 ---
