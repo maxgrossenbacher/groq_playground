@@ -22,9 +22,6 @@ Features:
     - Source tracking and citation
     - Progress monitoring
     - Results export to JSON
-
-Author: Your Name
-License: MIT
 """
 
 import os
