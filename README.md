@@ -95,10 +95,6 @@ Options:
 ```
 
 #### Webpage Summarizer Example Output
-
-Here's an example of summarizing Groq's website:
-
-# Groq Web Content Summarizer
 ---
 
 ### Configuration
@@ -170,8 +166,6 @@ python topic_researcher.py --topic "best mens nike running shoes"
 ```
 
 #### Topic Researcher Example Output
-
-# Topic Research Tool
 ---
 
 ### Search Results for: "best mens nike running shoes"
