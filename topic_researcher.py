@@ -238,7 +238,7 @@ class TopicResearcher:
         for source in sources:
             combined_content += f"Source: {source['title']}\n{source['summary']}\n\n"
         
-        prompt = f"""Please create a comprehensive summary of the following research about '{topic}'.
+        prompt = f"""You are a research assistant. Please create a comprehensive summary of the following research about '{topic}'.
         First, explain your thought process for analyzing and structuring the information.
         Then, provide a structured summary.
         
@@ -256,6 +256,7 @@ class TopicResearcher:
         2. Key Findings
         3. Different Perspectives (if any)
         4. Conclusions
+        5. Recommendations if applicable
         """
         
         try:
@@ -323,7 +324,6 @@ def main():
         parser = argparse.ArgumentParser(description="Research topics using AI")
         parser.add_argument("--topic", type=str, help="Topic to research")
         parser.add_argument("--max-sources", type=int, default=5, help="Maximum number of sources")
-        parser.add_argument("--show-think", action="store_true", help="Show model's thought process")
         args = parser.parse_args()
         
         # Get topic from arguments or user input
