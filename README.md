@@ -89,7 +89,7 @@ python webpage_summarizer.py [options]
 
 Options:
   --url URL             URL to summarize
-  --max-length LENGTH   Maximum length of summary (default: 500)
+  --max-length LENGTH   Maximum length of summary (default: 1000)
   --temperature TEMP    Temperature for text generation (default: 0.7)
   --model MODEL         Groq model to use (default: deepseek-r1-distill-llama-70b)
 ```
